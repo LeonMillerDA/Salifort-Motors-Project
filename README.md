@@ -14,7 +14,6 @@ Predicting which employees are likely to leave Salifort Motors using **Random Fo
 7. [Results](#results)  
 8. [Conclusion & Recommendations](#conclusion--recommendations)  
 9. [Next Steps](#next-steps)  
-10. [License](#license)  
 
 ---
 
@@ -109,6 +108,3 @@ Most impactful features (after removing `satisfactory level`):
 - Build an **interactive dashboard** to monitor employee churn risk in real-time  
 
 ---
-
-## 📜 License
-MIT License
