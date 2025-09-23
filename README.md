@@ -51,7 +51,7 @@ Predicting which employees are likely to leave Salifort Motors using **Random Fo
   - Left: 24%  
 - Correlation heatmap highlights relationships among features  
 
-![Correlation Heatmap](images/correlation_heatmap.png)  
+![Correlation Heatmap](images/correlation_heatmap.jpg)  
 
 ---
 
