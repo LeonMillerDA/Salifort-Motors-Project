@@ -74,10 +74,10 @@ Predicting which employees are likely to leave Salifort Motors using **Random Fo
 | Accuracy   | 96.8% |
 
 - **Confusion Matrix:**  
-![Confusion Matrix](images/confusion_matrix.png)  
+![Confusion Matrix](images/confusion_matrix.jpg)  
 
 - **ROC Curve:**  
-![ROC Curve](images/roc_curve.png)  
+![ROC Curve](images/roc_curve.jpg)  
 
 ---
 
@@ -88,7 +88,7 @@ Most impactful features (after removing `satisfactory level`):
 3. Number of Projects  
 4. Last Evaluation  
 
-![Feature Importance](images/feature_importance.png)  
+![Feature Importance](images/feature_importance.jpg)  
 
 ---
 
