@@ -2,9 +2,6 @@
 
 Predicting which employees are likely to leave Salifort Motors using **Random Forest classification**, with actionable insights to improve retention.  
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](YOUR_NOTEBOOK_LINK)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
 ---
 
 ## 📌 Table of Contents
