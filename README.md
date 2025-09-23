@@ -82,7 +82,7 @@ Most impactful features (after removing `satisfactory level`):
 1. Average Monthly Hours  
 2. Tenure (Time Spent in Company)  
 3. Number of Projects  
-4. Last Evaluation  
+4. Employee Review Score (Last Evaluation)
 
 ![Feature Importance](images/feature_importance.jpg)  
 
