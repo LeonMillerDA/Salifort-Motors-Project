@@ -41,7 +41,7 @@ Predicting which employees are likely to leave Salifort Motors using **Random Fo
 
 ## 🔍 Exploratory Data Analysis
 - Checked for missing values and duplicates ✅  
-- Cleaned column names and handled outliers  
+- Cleaned column names and observed/handled outliers  
 - Target distribution:  
   - Stayed: 83.4%  
   - Left: 16.6%  
