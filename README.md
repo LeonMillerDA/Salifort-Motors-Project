@@ -36,7 +36,7 @@ Predicting which employees are likely to leave Salifort Motors using tree-based 
 - Promotion in Last 5 Years  
 - Department  
 - Salary  
-- Last Evaluation  
+- Last Evaluation (employee_review_score) 
 
 ## 🔍 Exploratory Data Analysis
 ---
