@@ -8,23 +8,15 @@ Predicting which employees are likely to leave Salifort Motors using tree-based 
 
 ## 📌 Table of Contents
 
-Project Overview
-
-Dataset
-
-Exploratory Data Analysis
-
-Model Comparison
-
-Evaluation Metrics
-
-Feature Importance
-
-Results
-
-Conclusion & Recommendations
-
-Next Steps
+1. [Project Overview](#project-overview)  
+2. [Dataset](#dataset)  
+3. [Exploratory Data Analysis](#exploratory-data-analysis)  
+4. [Model Comparison](#model-comparison)  
+5. [Evaluation Metrics](#evaluation-metrics)  
+6. [Feature Importance](#feature-importance)  
+7. [Results](#results)  
+8. [Conclusion & Recommendations](#conclusion--recommendations)  
+9. [Next Steps](#next-steps)  
 
 ---
 
