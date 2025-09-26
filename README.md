@@ -1,5 +1,5 @@
 # 🚦 Predicting Employee Turnover at Salifort Motors | Decision Tree & Random Forest
-**Accuracy:** **97.8%** | **AUC:** **98%**
+**Accuracy:** **97.8%** ✅ | **AUC:** **98%** 🚀
 
 Predict which employees are likely to leave Salifort Motors using tree-based classification models, with actionable insights to improve retention.
 
@@ -7,20 +7,20 @@ Predict which employees are likely to leave Salifort Motors using tree-based cla
 
 ## 📌 Table of Contents
 
-- **[Project Overview](#project-overview)**  
-- **[Dataset](#dataset)**  
-- **[Exploratory Data Analysis](#exploratory-data-analysis)**  
-- **[Model Comparison](#model-comparison)**  
-- **[Evaluation Metrics](#evaluation-metrics)**  
-- **[Results & Key Features](#results--key-features)**  
-- **[Visualizations](#visualizations)**  
-- **[Conclusion & Recommendations](#conclusion--recommendations)**  
-- **[Next Steps](#next-steps)**
+- [Project Overview](#project-overview)  
+- [Dataset](#dataset)  
+- [Exploratory Data Analysis](#exploratory-data-analysis)  
+- [Model Comparison](#model-comparison)  
+- [Evaluation Metrics](#evaluation-metrics)  
+- [Results & Key Features](#results--key-features)  
+- [Visualizations](#visualizations)  
+- [Conclusion & Recommendations](#conclusion--recommendations)  
+- [Next Steps](#next-steps)
 
 ---
 
 ## 📝 Project Overview
-
+---
 **Problem:** High employee turnover is costly, leading to lost productivity and recruitment expenses.  
 
 **Goal:** Predict which employees are at risk of leaving and identify actionable factors driving attrition.  
@@ -32,8 +32,8 @@ Predict which employees are likely to leave Salifort Motors using tree-based cla
 ---
 
 ## 📊 Dataset
-
-**Source:** [Kaggle – HR Analytics & Job Prediction](https://www.kaggle.com/datasets)  
+---
+**Source:** [Kaggle – HR Analytics & Job Prediction](https://www.kaggle.com/datasets/mfaisalqureshi/hr-analytics-and-job-prediction/data)  
 
 **Shape:** 14,999 rows × 10 columns  
 
@@ -45,7 +45,7 @@ Predict which employees are likely to leave Salifort Motors using tree-based cla
 - Satisfaction Level  
 - Number of Projects  
 - Average Monthly Hours  
-- Tenure (time_spend_company)  
+- Tenure  
 - Promotion in Last 5 Years  
 - Department  
 - Salary  
@@ -54,7 +54,7 @@ Predict which employees are likely to leave Salifort Motors using tree-based cla
 ---
 
 ## 🔍 Exploratory Data Analysis
-
+---
 - No missing values ✅  
 - Duplicates removed, column names cleaned  
 - Outliers explored in tenure  
@@ -67,7 +67,7 @@ Predict which employees are likely to leave Salifort Motors using tree-based cla
 ---
 
 ## 🛠 Model Comparison
-
+---
 | Model | Precision | Recall | F1-Score | Accuracy | AUC | Notes |
 |-------|-----------|--------|----------|---------|-----|-------|
 | Decision Tree (CV) | 0.916 | 0.917 | 0.916 | 0.972 | 0.970 | Cross-validated on training set |
@@ -78,23 +78,21 @@ Predict which employees are likely to leave Salifort Motors using tree-based cla
 ---
 
 ## 📈 Evaluation Metrics
-
+---
 **Random Forest – Test Data**  
 
-| Metric | Score |
-|--------|-------|
-| **Precision** | 0.909 |
-| **Recall** | 0.904 |
-| **F1-Score** | 0.906 |
-| **Accuracy** | 0.969 |
-| **AUC** | 0.943 |
+- 🔹 **Precision:** 0.909  
+- 🔹 **Recall:** 0.904  
+- 🔹 **F1-Score:** 0.906  
+- 🔹 **Accuracy:** 0.969  
+- 🔹 **AUC:** 0.943  
 
 📌 **Insight:** Excellent **discrimination** between employees who stay vs. leave — the model effectively ranks employees by risk.
 
 ---
 
 ## ✅ Results & Key Features
-
+---
 **Top Features Driving Attrition:**  
 1. **Number of Projects**  
 2. **Average Monthly Hours**  
@@ -106,6 +104,7 @@ Predict which employees are likely to leave Salifort Motors using tree-based cla
 ---
 
 ## 🖼 Visualizations
+---
 
 ### Correlation Heatmap
 <img src="images/correlation_heatmap.jpg" alt="Correlation Heatmap" width="400"/>  
@@ -122,7 +121,7 @@ Predict which employees are likely to leave Salifort Motors using tree-based cla
 ---
 
 ## 💡 Conclusion & Recommendations
-
+---
 - **Optimize project assignments** to prevent overload.  
 - **Recognize & reward high-hour employees** to reduce burnout.  
 - **Investigate dissatisfaction among employees with ≥4 years tenure**; consider promotions or retention programs.
@@ -130,7 +129,7 @@ Predict which employees are likely to leave Salifort Motors using tree-based cla
 ---
 
 ## 🔮 Next Steps
-
+---
 - Explore **boosting methods** like XGBoost or LightGBM for potential performance gains.  
 - Incorporate **external engagement/survey data** for richer features.  
 - Build a **real-time dashboard** for managers to monitor churn risk.  
