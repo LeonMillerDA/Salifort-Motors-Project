@@ -1,26 +1,31 @@
-# 🚀 Employee Churn Prediction - Salifort Motors
+🚦 Predicting Employee Turnover at Salifort Motors | Decision Tree & Random Forest | AUC 98%, Accuracy 97.8%
 
-Employee churn prediction using Decision Tree & Random Forest – Final model achieved AUC 98%, Accuracy 97.8%.
+
+
+
+
 
 Predicting which employees are likely to leave Salifort Motors using tree-based classification models, with actionable insights to improve retention.
 
----
+📌 Table of Contents
 
-## 📌 Table of Contents
+📝 Project Overview
 
-1. [Project Overview](#project-overview)  
-2. [Dataset](#dataset)  
-3. [Exploratory Data Analysis](#exploratory-data-analysis)  
-4. [Model Comparison](#model-comparison)  
-5. [Evaluation Metrics](#evaluation-metrics)  
-6. [Feature Importance](#feature-importance)  
-7. [Results](#results)  
-8. [Conclusion & Recommendations](#conclusion--recommendations)  
-9. [Next Steps](#next-steps)  
+📊 Dataset
 
----
+🔍 Exploratory Data Analysis
 
-## 📝 Project Overview
+🛠 Model Comparison
+
+📈 Evaluation Metrics
+
+✅ Results & Key Features
+
+💡 Conclusion & Recommendations
+
+🔮 Next Steps
+
+📝 Project Overview
 
 Problem: High employee turnover is costly. Salifort Motors wants to identify which employees are most at risk of leaving.
 
@@ -28,9 +33,7 @@ Goal: Build predictive models to forecast attrition and uncover key drivers behi
 
 Target Variable: left (1 = left, 0 = stayed)
 
----
-
-## 📊 Dataset
+📊 Dataset
 
 Source: Kaggle - HR Analytics and Job Prediction
 
@@ -54,9 +57,7 @@ Salary
 
 Last Evaluation
 
----
-
-## 🔍 Exploratory Data Analysis
+🔍 Exploratory Data Analysis
 
 No missing values were found ✅
 
@@ -72,102 +73,52 @@ Left: 16.6%
 
 📌 Insight: The dataset is imbalanced, with a majority of employees staying.
 
-Correlation analysis performed using a heatmap:
+🛠 Model Comparison
+Model	Precision	Recall	F1-Score	Accuracy	AUC	Notes
+Decision Tree (CV)	0.9155	0.9169	0.9157	0.9719	0.9698	Cross-validated on training set
+Random Forest (CV)	0.9500	0.9156	0.9325	0.9779	0.9804	Chosen final model
 
-![Correlation Heatmap](images/correlation_heatmap.jpg)  
+✅ Random Forest was chosen as the final model due to higher AUC and accuracy.
 
----
-
-## 🛠 Model Comparison
-
-Two models were trained and cross-validated:
-
-Decision Tree (cross-validated):
-
-AUC: 96.9%
-
-Precision: 91.5%
-
-Recall: 91.7%
-
-F1-Score: 91.6%
-
-Accuracy: 97.2%
-
-Random Forest (cross-validated):
-
-AUC: 98.0%
-
-Precision: 95.0%
-
-Recall: 91.6%
-
-F1-Score: 93.2%
-
-Accuracy: 97.8%
-
-✅ Both models performed strongly, but the Random Forest achieved the highest AUC and accuracy, making it the final chosen model.
-
----
-
-## 📈 Evaluation Metrics (Random Forest – Final Choice)
+📈 Evaluation Metrics (Random Forest – Test Data)
 Metric	Score
-AUC	98.0%
-Precision	95.0%
-Recall	91.6%
-F1-Score	93.2%
-Accuracy	97.8%
+Precision	0.9091
+Recall	0.9036
+F1-Score	0.9063
+Accuracy	0.9689
+AUC	0.9428
+✅ Results & Key Features
+Metric	Score
+Precision	0.9091
+Recall	0.9036
+F1-Score	0.9063
+Accuracy	0.9689
+AUC	0.9428
 
-- **Confusion Matrix:**  
-![Confusion Matrix](images/confusion_matrix.jpg)  
+Top Features Influencing Attrition:
 
-- **ROC Curve:**  
-![ROC Curve](images/roc_curve.jpg)  
+Rank	Feature
+1	🔹 Average Monthly Hours
+2	🔹 Tenure (Time Spent)
+3	🔹 Number of Projects
+4	🔹 Employee Review Score
 
----
+📌 Summary: Random Forest achieved strong performance on the test set. Workload, tenure, project count, and review scores are the main drivers of employee churn.
 
-## 🌟 Feature Importance
-
-Top features influencing attrition (after removing satisfaction_level to avoid leakage):
-
-Average Monthly Hours
-
-Tenure (Time Spent in Company)
-
-Number of Projects
-
-Employee Review Score (Last Evaluation)
-
-![Feature Importance](images/feature_importance.jpg)  
-
----
-
-## ✅ Results
-
-Both Decision Tree and Random Forest achieved strong results.
-
-The Random Forest outperformed the Decision Tree, with an AUC of 98.0% and accuracy of 97.8%.
-
-Key drivers of attrition were workload, tenure, and performance evaluation scores.
-
----
-
-## 💡 Conclusion & Recommendations
+🖼 Visualizations
+<table> <tr> <td> <a href="images/correlation_heatmap.jpg"> <img src="images/correlation_heatmap.jpg" width="300px"/> </a> </td> <td> <a href="images/confusion_matrix.jpg"> <img src="images/confusion_matrix.jpg" width="300px"/> </a> </td> </tr> <tr> <td> <a href="images/roc_curve.jpg"> <img src="images/roc_curve.jpg" width="300px"/> </a> </td> <td> <a href="images/feature_importance.jpg"> <img src="images/feature_importance.jpg" width="300px"/> </a> </td> </tr> </table>
+💡 Conclusion & Recommendations
 
 Limit the number of projects assigned to employees.
 
 Adjust expectations or reward employees for long working hours.
 
-Consider promoting employees with ≥4 years tenure or investigate dissatisfaction patterns at that stage.  
+Consider promoting employees with ≥4 years tenure or investigate dissatisfaction patterns at that stage.
 
----
-
-## 🔮 Next Steps
+🔮 Next Steps
 
 Explore boosting methods like XGBoost or LightGBM for potential gains.
 
 Incorporate external engagement or survey data for richer features.
 
-Build an interactive dashboard to monitor employee churn risk in real-time. 
-
----
+Build an interactive dashboard to monitor employee churn risk in real-time.
