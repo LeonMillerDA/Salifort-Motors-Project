@@ -1,32 +1,45 @@
-# 🚦 Predicting Employee Turnover at Salifort Motors | Decision Tree & Random Forest | AUC 98%, Accuracy 97.8%
+# 🚦 Predicting Employee Turnover at Salifort Motors | Decision Tree & Random Forest
+**Accuracy:** **97.8%** | **AUC:** **98%**
 
-Predicting which employees are likely to leave Salifort Motors using tree-based classification models, with actionable insights to improve retention.
+Predict which employees are likely to leave Salifort Motors using tree-based classification models, with actionable insights to improve retention.
+
+---
 
 ## 📌 Table of Contents
 
-- **[📝 Project Overview](#project-overview)**  
-- **[📊 Dataset](#dataset)**  
-- **[🔍 Exploratory Data Analysis](#exploratory-data-analysis)**  
-- **[🛠 Model Comparison](#model-comparison)**  
-- **[📈 Evaluation Metrics](#evaluation-metrics)**  
-- **[✅ Results & Key Features](#results--key-features)**  
-- **[🖼 Visualizations](#visualizations)**  
-- **[💡 Conclusion & Recommendations](#conclusion--recommendations)**  
-- **[🔮 Next Steps](#next-steps)**
+- **[Project Overview](#project-overview)**  
+- **[Dataset](#dataset)**  
+- **[Exploratory Data Analysis](#exploratory-data-analysis)**  
+- **[Model Comparison](#model-comparison)**  
+- **[Evaluation Metrics](#evaluation-metrics)**  
+- **[Results & Key Features](#results--key-features)**  
+- **[Visualizations](#visualizations)**  
+- **[Conclusion & Recommendations](#conclusion--recommendations)**  
+- **[Next Steps](#next-steps)**
+
+---
 
 ## 📝 Project Overview
+
+**Problem:** High employee turnover is costly, leading to lost productivity and recruitment expenses.  
+
+**Goal:** Predict which employees are at risk of leaving and identify actionable factors driving attrition.  
+
+**Target Variable:** `left` (1 = left, 0 = stayed)  
+
+**Business Impact:** Early identification of at-risk employees allows management to implement retention strategies, saving costs and improving workforce stability.
+
 ---
-**Problem:** High employee turnover is costly. Salifort Motors wants to identify which employees are most at risk of leaving.  
-
-**Goal:** Build predictive models to forecast attrition and uncover key drivers behind employee churn.  
-
-**Target Variable:** `left` (1 = left, 0 = stayed)
 
 ## 📊 Dataset
----
-**Source:** Kaggle - HR Analytics and Job Prediction  
+
+**Source:** [Kaggle – HR Analytics & Job Prediction](https://www.kaggle.com/datasets)  
 
 **Shape:** 14,999 rows × 10 columns  
+
+**Feature Types:**  
+- **Numerical:** Satisfaction Level, Number of Projects, Average Monthly Hours, Tenure, Employee Review Score  
+- **Categorical:** Department, Salary, Promotion in Last 5 Years  
 
 **Key Features:**  
 - Satisfaction Level  
@@ -36,74 +49,89 @@ Predicting which employees are likely to leave Salifort Motors using tree-based 
 - Promotion in Last 5 Years  
 - Department  
 - Salary  
-- Last Evaluation (employee_review_score) 
+- Employee Review Score  
+
+---
 
 ## 🔍 Exploratory Data Analysis
----
-- No missing values were found ✅  
+
+- No missing values ✅  
 - Duplicates removed, column names cleaned  
 - Outliers explored in tenure  
 
 **Target distribution:**  
-- Stayed: 83.4%  
-- Left: 16.6%  
+- **Stayed:** 83.4% | **Left:** 16.6%  
 
-📌 **Insight:** The dataset is imbalanced, with a majority of employees staying.
+📌 **Insight:** The dataset is imbalanced. Metrics like **AUC** and **F1-score** are more reliable than accuracy alone.
+
+---
 
 ## 🛠 Model Comparison
----
+
 | Model | Precision | Recall | F1-Score | Accuracy | AUC | Notes |
 |-------|-----------|--------|----------|---------|-----|-------|
-| Decision Tree (CV) | 0.9155 | 0.9169 | 0.9157 | 0.9719 | 0.9698 | Cross-validated on training set |
-| Random Forest (CV) | 0.9500 | 0.9156 | 0.9325 | 0.9779 | 0.9804 | Chosen final model |
+| Decision Tree (CV) | 0.916 | 0.917 | 0.916 | 0.972 | 0.970 | Cross-validated on training set |
+| Random Forest (CV) | 0.950 | 0.916 | 0.933 | 0.978 | 0.980 | ✅ Chosen final model |
 
-✅ Random Forest was chosen as the final model due to higher AUC and accuracy.
+✅ **Random Forest** was selected for its **high AUC**, strong generalization, and ability to capture feature interactions effectively.
+
+---
 
 ## 📈 Evaluation Metrics
----
+
 **Random Forest – Test Data**  
 
 | Metric | Score |
 |--------|-------|
-| Precision | 0.9091 |
-| Recall | 0.9036 |
-| F1-Score | 0.9063 |
-| Accuracy | 0.9689 |
-| AUC | 0.9428 |
+| **Precision** | 0.909 |
+| **Recall** | 0.904 |
+| **F1-Score** | 0.906 |
+| **Accuracy** | 0.969 |
+| **AUC** | 0.943 |
+
+📌 **Insight:** Excellent **discrimination** between employees who stay vs. leave — the model effectively ranks employees by risk.
+
+---
 
 ## ✅ Results & Key Features
+
+**Top Features Driving Attrition:**  
+1. **Number of Projects**  
+2. **Average Monthly Hours**  
+3. **Employee Review Score**  
+4. **Tenure**  
+
+📌 **Summary:** Workload, tenure, project count, and review scores are the main drivers of employee churn. Targeting these areas can significantly reduce turnover.
+
 ---
-**Top Features Influencing Attrition:**  
-
-| Rank | Feature |
-|------|--------|
-| 1 | 🔹 Number of Projects |
-| 2 | 🔹 Average Monthly Hours |
-| 3 | 🔹 Employee Review Score |
-| 4 | 🔹 Tenure  |
-
-📌 **Summary:** Random Forest achieved strong performance on the test set. Workload, tenure, project count, and review scores are the main drivers of employee churn.
 
 ## 🖼 Visualizations
----
 
 ### Correlation Heatmap
-<img src="images/correlation_heatmap.jpg" alt="Correlation Heatmap" width="400"/>
+<img src="images/correlation_heatmap.jpg" alt="Correlation Heatmap" width="400"/>  
+*Shows feature relationships and potential multicollinearity.*
 
 ### Feature Importance
-<img src="images/feature_importance.jpg" alt="Feature Importance" width="400"/>
+<img src="images/feature_importance.jpg" alt="Feature Importance" width="400"/>  
+*Number of projects and workload metrics are strongest predictors.*
 
 ### ROC Curve
-<img src="images/roc_curve.jpg" alt="ROC Curve" width="400"/>
+<img src="images/roc_curve.jpg" alt="ROC Curve" width="400"/>  
+*High AUC → excellent discrimination between employees who stay vs. leave.*
+
+---
 
 ## 💡 Conclusion & Recommendations
+
+- **Optimize project assignments** to prevent overload.  
+- **Recognize & reward high-hour employees** to reduce burnout.  
+- **Investigate dissatisfaction among employees with ≥4 years tenure**; consider promotions or retention programs.
+
 ---
-- Limit the number of projects assigned to employees.  
-- Adjust expectations or reward employees for long working hours.  
-- Consider promoting employees with ≥4 years tenure or investigate dissatisfaction patterns at that stage.
 
 ## 🔮 Next Steps
----
-- Explore boosting methods like XGBoost or LightGBM for potential gains.  
-- Incorporate external engagement or survey data for richer features.  
-- Build an interactive dashboard to monitor employee churn risk in real-time.
+
+- Explore **boosting methods** like XGBoost or LightGBM for potential performance gains.  
+- Incorporate **external engagement/survey data** for richer features.  
+- Build a **real-time dashboard** for managers to monitor churn risk.  
+- Deploy models to enable predictive HR analytics across departments.
